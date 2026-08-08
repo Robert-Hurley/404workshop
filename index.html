@@ -301,10 +301,7 @@
     .card p { margin: 0; color: var(--muted); }
 
     .feature {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 18px;
-      align-items: stretch;
+      max-width: 780px;
     }
 
     .feature > div {
@@ -312,53 +309,6 @@
       border-radius: 18px;
       background: var(--panel);
       padding: 32px;
-    }
-
-    .feature .project-art {
-      display: grid;
-      min-height: 320px;
-      place-items: center;
-      background:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
-        var(--panel-2);
-      background-size: 28px 28px;
-    }
-
-    .device {
-      width: min(320px, 78%);
-      aspect-ratio: 1.45 / 1;
-      border: 2px solid #38424d;
-      border-radius: 18px 18px 8px 8px;
-      transform: perspective(700px) rotateX(13deg) rotateZ(-2deg);
-      background: linear-gradient(165deg, #262d34, #11151a 55%);
-      box-shadow: 0 28px 50px rgba(0,0,0,.38);
-      padding: 18px;
-    }
-
-    .device-screen {
-      width: 36%;
-      height: 19%;
-      border-radius: 5px;
-      background: #b8ff86;
-      box-shadow: 0 0 22px rgba(141,255,71,.15);
-      margin-bottom: 18px;
-    }
-
-    .pads {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      width: 72%;
-      margin-left: auto;
-    }
-
-    .pads span {
-      display: block;
-      aspect-ratio: 1;
-      border-radius: 4px;
-      background: #59636e;
-      border: 1px solid #707b86;
     }
 
     .tag {
@@ -523,17 +473,6 @@
         </div>
 
         <div class="feature">
-          <div class="project-art" aria-hidden="true">
-            <div class="device">
-              <div class="device-screen"></div>
-              <div class="pads">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-
           <div>
             <span class="tag">Open project</span>
             <h3>Roland SP-404MKII Stand</h3>
@@ -548,7 +487,7 @@
               <div><small>Price</small><strong>Free</strong></div>
             </div>
 
-            <a class="btn secondary" href="#" aria-label="MakerWorld link placeholder">MakerWorld link coming soon</a>
+            <a class="btn secondary" href="https://makerworld.com/en/models/3147751-roland-sp-404mkii-wedge-stand#profileId-3555196" target="_blank" rel="noopener noreferrer" aria-label="View the Roland SP-404MKII wedge stand on MakerWorld">View on MakerWorld</a>
           </div>
         </div>
       </section>
