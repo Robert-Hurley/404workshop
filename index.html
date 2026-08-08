@@ -147,6 +147,17 @@
     .btn:hover { transform: translateY(-2px); }
     .btn.secondary:hover { border-color: #3a444f; background: var(--panel); }
 
+    .btn.coffee {
+      background: #ffdd00;
+      color: #141414;
+      border-color: #ffdd00;
+    }
+
+    .btn.coffee:hover {
+      background: #ffe84d;
+      border-color: #ffe84d;
+    }
+
     .terminal {
       position: relative;
       border: 1px solid var(--line);
@@ -344,6 +355,38 @@
     .meta small { display: block; color: #77838e; }
     .meta strong { font-size: .95rem; }
 
+    .support-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(255,221,0,.08), transparent 18rem),
+        var(--panel);
+    }
+
+    .support-panel h3 {
+      margin: 0 0 10px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      letter-spacing: -.035em;
+    }
+
+    .support-panel p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+    }
+
+    .support-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
     footer {
       display: flex;
       justify-content: space-between;
@@ -377,6 +420,8 @@
       .grid, .grid.four { grid-template-columns: 1fr; }
       .section-head { display: block; }
       .section-head p { margin-top: 14px; }
+      .support-panel { grid-template-columns: 1fr; }
+      .support-actions { justify-content: flex-start; }
     }
 
     @media (max-width: 520px) {
@@ -387,6 +432,18 @@
       footer { align-items: flex-start; flex-direction: column; }
     }
   </style>
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false"
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+    data-id="404Workshop"
+    data-description="Support 404 Workshop on Buy Me a Coffee"
+    data-message="Like the projects? Help keep the workshop making, breaking, and fixing things."
+    data-color="#8dff47"
+    data-position="Right"
+    data-x_margin="18"
+    data-y_margin="18"
+  ></script>
 </head>
 <body>
   <div class="wrap">
@@ -399,6 +456,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#plan">Plan</a>
+        <a href="#support">Support</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -414,6 +472,7 @@
           <div class="actions">
             <a class="btn primary" href="#projects">See the first project</a>
             <a class="btn secondary" href="#about">What is 404 Workshop?</a>
+            <a class="btn coffee" href="https://buymeacoffee.com/404workshop" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
           </div>
         </div>
 
@@ -451,12 +510,12 @@
           <article class="card">
             <span class="num">02</span>
             <h3>3D Printing</h3>
-            <p>Functional parts, stands, adapters, fixtures, and designs</p>
+            <p>Functional parts, stands, adapters, fixtures, and designs worth sharing instead of gatekeeping.</p>
           </article>
           <article class="card">
             <span class="num">03</span>
             <h3>Music + Electronics</h3>
-            <p>Sampler setups, synth experiments, studio accessories, DIY utilities,</p>
+            <p>Sampler setups, synth experiments, studio accessories, DIY utilities, and electronic noise with a purpose.</p>
           </article>
           <article class="card">
             <span class="num">04</span>
@@ -468,8 +527,8 @@
 
       <section id="projects">
         <div class="section-head">
-          <h2>The thing that started the name.</h2>
-          <p></p>
+          <h2>First project</h2>
+          <p>The thing that started the name.</p>
         </div>
 
         <div class="feature">
@@ -477,7 +536,7 @@
             <span class="tag">Open project</span>
             <h3>Roland SP-404MKII Stand</h3>
             <p>
-              I wanted a simple stand for the SP-404MKII. The result worked well enough that it made more sense to share the files
+              I wanted a simple stand for the SP-404MKII. Most of what I found online was a finished 3D print for $30–50, so I designed my own instead. The result worked well enough that it made more sense to share the files than become another guy selling a piece of plastic on the internet.
             </p>
 
             <div class="meta">
@@ -523,6 +582,25 @@
         </div>
       </section>
 
+      <section id="support">
+        <div class="section-head">
+          <h2>Support the workshop</h2>
+          <p>404 Workshop keeps a lot of useful files, project notes, and experiments open. If something here saves you time or money, you can throw a few bucks toward the next build.</p>
+        </div>
+
+        <div class="support-panel">
+          <div>
+            <span class="tag">Optional support</span>
+            <h3>Help fund the next unnecessary-but-useful project.</h3>
+            <p>No paywall, no guilt trip. Free projects stay free. Support just helps cover filament, materials, electronics, hosting, and whatever part gets sacrificed to the troubleshooting gods next.</p>
+          </div>
+
+          <div class="support-actions">
+            <a class="btn coffee" href="https://buymeacoffee.com/404workshop" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div class="section-head">
           <h2>More soon.</h2>
@@ -533,7 +611,7 @@
 
     <footer>
       <span>© 2026 404 Workshop</span>
-      <span class="status">404workshop.com online soon</span>
+      <a class="status" href="https://buymeacoffee.com/404workshop" target="_blank" rel="noopener noreferrer">Support 404 Workshop</a>
     </footer>
   </div>
 </body>
